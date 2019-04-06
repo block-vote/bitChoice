@@ -44,8 +44,8 @@
     //    "https://860.media/js-projects/gridui/images/wierd-al-sm-a.jpg";
     //    "https://860.media/js-projects/gridui/images/beatles-sm-b.jpg";
     //    "https://860.media/js-projects/gridui/images/janus-joplin-sm-a.jpg";
-    //  var po = document.getElementById("theOne");
-    //  po.innerHTML += <div class="item"><div class="item-content"><img src=lk[2]></div></div>;
+    // var po = document.getElementById("theOne");
+    // po.innerHTML += <div class="item"><div class="item-content"><img src=lk[2]></div></div>;
     tDat = [ {name:"Andrew Bird", aRef:"https://860.media/js-projects/gridui/images/Andrew-Bird-11302015-615x4541.jpg"},
              {name:"REM", aRef:"https://860.media/js-projects/gridui/images/rem-sm.jpg"},
              {name:"Beck", aRef:"https://860.media/js-projects/gridui/images/beck-sm.jpg"},
@@ -57,12 +57,7 @@
    var tx = (tDat.legnth * 2);
    var bDat = tDat;
    var fDat = [];
-          alert(bDat[1].name);
-          lMix(bDat);
-          alert(bDat[1].name);
-          alert(tDat[1].name);
-          lMix(tDat);
-          alert(tDat[1].name);
+   alert(bDat[1].name);lMix(bDat);alert(bDat[1].name);alert(tDat[1].name);lMix(tDat);alert(tDat[1].name);
 
    function lMix(iArray){
       for (var ib = iArray.length - 1; ib > 0; ib-- ){
@@ -70,28 +65,22 @@
         var iTemp = iArray[ib];
         iArray[ib] = iArray[jRand];
         iArray[jRand] = iTemp;
-      }
-  }
-
+  }}
   for (var ic = 0; ic <= tx; ic++){
         fDat[ic] = tDat[ic];
         var foo = (ic + 1);
         fDat[foo] = bDat[ic];
-
       var gDiv = document.createElement("DIV");
       gDiv.setAttribute.className("grid");
       var ics = ic.toString;
       var g1 = ("maingrid" + ics);
       gDiv.setAttribute.id("g1");
-
       var iDiv = document.createElement("DIV");
       iDiv.setAttribute.className("item");
       gDiv.setAttribute.id("itm");
-
       var cDiv = document.createElement("DIV");
       cDiv.setAttribute.className("item-content");
   }
-
 
   for(var pc = 0; pc <= tx; pc++){
     var tSlam = document.getElementById("hy");
@@ -134,7 +123,6 @@
 var cats = ["Midas", "Tabby", "Snickers", "Lucas", "Whiskers", "Luna"];
 var htm2 = document.getElementById("theOne");
 htm2.innerHTML += cats;
-
 function startGame(tDis){
  // create/append div to body, create and then append div, create+append img, grab the image by iterating over amn array
  // Double obLen to let all pictures have a match.
@@ -157,7 +145,6 @@ function startGame(tDis){
    iDiv2.appendChild(iCrd);
    document.body.divOne.appendChild(iDiv4);
  }
-
  const artJson = 'https://860.media/portfolio/1/artists1.json';
  var fid = [];
  var newArr1 = [], newArr2 = [];
@@ -171,8 +158,6 @@ function startGame(tDis){
     }
     for(var i2=obL-1;i2>0;i2--){ var j2=Math.floor(Math.random()*(i2+1));var temp2=newArr2[i2];newArr2[i2] = newArr2[j2]; newArr2[j2] = temp2; }
  }
-
-
  // use python to save the user's unique starting board - it would be nice to save it to the server
  // var fruits = ["Banana", "Orange", "Apple", "Mango"];
  // var x = fruits.keys();
@@ -180,8 +165,6 @@ function startGame(tDis){
  // Object.values(obj).forEach(value => {
  // <h2> {value.name} </h2>
  // });
-
-
 </script>
 </body>
 </html>
