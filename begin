@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+ <html lang="en" >
+   <head>
+     <style>
+     </style>
+     <meta charset="UTF-8">
+     <title>.JS Portfolio Item 1</title>
+     <link rel="stylesheet" href="style2.css">
+   </head>
+  <body>
+    <script>
+    var tDis = [ {name:"Andrew Bird", aRef:"https://860.media/js-projects/gridui/images/Andrew-Bird-11302015-615x4541.jpg"},
+                 {name:"REM", aRef:"https://860.media/js-projects/gridui/images/rem-sm.jpg"},
+                 {name:"Beck", aRef:"https://860.media/js-projects/gridui/images/beck-sm.jpg"},
+                 {name:"Biggie", aRef:"https://860.media/js-projects/gridui/images/biggie-sm-a.jpg"},
+                 {name:"Radio Head",aRef:"https://860.media/js-projects/gridui/images/radio--head1.jpg"},
+                 {name:"Madona", aRef:"https://860.media/js-projects/gridui/images/madona-sm-a.jpg"},
+                 {name:"Nirvana", aRef:"https://860.media/js-projects/gridui/images/nirvana-sm.jpg"}
+               ];
+    </script>
+    <div class="grid">
+      <button id="ub1" onclick="startGame(tDis)">Press</button>
+      <div id="theOne">Hello world</div>
+    </div>
+  <div id="ublauren" class="grid">
+    <div id ="kh" class = "item">
+    <button id="ub2" onclick="startGame(tDis)">Here</button>
+    <div id="theTwo">Hello world</div>
+    <div id ="hy" class ="item-content">
+      Hi Babe - watch
+    </div>
+  </div>
+  </div>
+  <script>
+    var lk = [];
+    lk[1] = "https://860.media/js-projects/gridui/images/nirvana-sm.jpg";
+    lk[2] = "https://860.media/js-projects/gridui/images/Andrew-Bird-11302015-615x4541.jpg";
+    lk[3] = "https://860.media/js-projects/gridui/images/beck-sm.jpg",
+    lk[4] = "https://860.media/js-projects/gridui/images/biggie-sm-a.jpg";
+    lk[5] = "https://860.media/js-projects/gridui/images/radio--head1.jpg";
+    lk[6] = "https://860.media/js-projects/gridui/images/madona-sm-a.jpg";
+    //    "https://860.media/js-projects/gridui/images/elliott-smith-200px.jpg";
+    //    "https://860.media/js-projects/gridui/images/ben-folds-five-sm.jpg";
+    //    "https://860.media/js-projects/gridui/images/wierd-al-sm-a.jpg";
+    //    "https://860.media/js-projects/gridui/images/beatles-sm-b.jpg";
+    //    "https://860.media/js-projects/gridui/images/janus-joplin-sm-a.jpg";
+    //  var po = document.getElementById("theOne");
+    //  po.innerHTML += <div class="item"><div class="item-content"><img src=lk[2]></div></div>;
+    tDat = [ {name:"Andrew Bird", aRef:"https://860.media/js-projects/gridui/images/Andrew-Bird-11302015-615x4541.jpg"},
+             {name:"REM", aRef:"https://860.media/js-projects/gridui/images/rem-sm.jpg"},
+             {name:"Beck", aRef:"https://860.media/js-projects/gridui/images/beck-sm.jpg"},
+             {name:"Biggie", aRef:"https://860.media/js-projects/gridui/images/biggie-sm-a.jpg"},
+             {name:"Radio Head", aRef:"https://860.media/js-projects/gridui/images/radio--head1.jpg"},
+             {name:"Madona", aRef:"https://860.media/js-projects/gridui/images/madona-sm-a.jpg"},
+             {name:"Nirvana", aRef:"https://860.media/js-projects/gridui/images/nirvana-sm.jpg"}
+           ];
+   var tx = (tDat.legnth * 2);
+   var bDat = tDat;
+   var fDat = [];
+          alert(bDat[1].name);
+          lMix(bDat);
+          alert(bDat[1].name);
+          alert(tDat[1].name);
+          lMix(tDat);
+          alert(tDat[1].name);
+
+   function lMix(iArray){
+      for (var ib = iArray.length - 1; ib > 0; ib-- ){
+        var jRand = Math.floor(Math.random() * (ib + 1));
+        var iTemp = iArray[ib];
+        iArray[ib] = iArray[jRand];
+        iArray[jRand] = iTemp;
+      }
+  }
+
+  for (var ic = 0; ic <= tx; ic++){
+        fDat[ic] = tDat[ic];
+        var foo = (ic + 1);
+        fDat[foo] = bDat[ic];
+
+      var gDiv = document.createElement("DIV");
+      gDiv.setAttribute.className("grid");
+      var ics = ic.toString;
+      var g1 = ("maingrid" + ics);
+      gDiv.setAttribute.id("g1");
+
+      var iDiv = document.createElement("DIV");
+      iDiv.setAttribute.className("item");
+      gDiv.setAttribute.id("itm");
+
+      var cDiv = document.createElement("DIV");
+      cDiv.setAttribute.className("item-content");
+  }
+
+
+  for(var pc = 0; pc <= tx; pc++){
+    var tSlam = document.getElementById("hy");
+    tSlam.innerHTML += (tDat[pc].name + "</n>");
+  }
+
+    //alert(tDat[3].aRef);
+    var anImage = document.createElement("IMG");
+    var anImage2 = document.createElement("IMG");
+    var imageParent = document.getElementById("theTwo");
+    anImage.setAttribute.id = "Id-m1";
+    anImage.className = "my-class";
+    anImage.src = tDat[4].aRef;
+    imageParent.appendChild(anImage);
+    imageParent.appendChild(anImage2);
+      shuffleArray(lk);
+ const items = 'https://860.media/portfolio/1/artists1.json';
+ const gid = [];
+ fetch(items).then(daBlob => daBlob.json()).then(jsonData => gid.push(...jsonData));
+ var elml = "item";
+ var elm2 = "item-content";
+ // Create shuffle function, Credit https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm
+ function shuffleArray(arr) {
+   for (var i = arr.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+      var ht = document.getElementById("theOne");
+     }
+ }
+// Seperate fro this project, develop the idea of a rang hash in blockchain,
+// meaning a losly fitting hase that exists as a range between 2 ints.
+// A range hash would only be useful for hashing a certain type of dataBlob
+// +creating event coordination/sales software for use on handout tablets. see notes.
+// add a function that lets users input their own favorite artists into the data object
+// add php or python (in a new function?) to save user data to a live/public Object at the domain where the game lives
+// add a voting function to finalize adding to the public data Object
+
+var cats = ["Midas", "Tabby", "Snickers", "Lucas", "Whiskers", "Luna"];
+var htm2 = document.getElementById("theOne");
+htm2.innerHTML += cats;
+
+function startGame(tDis){
+ // create/append div to body, create and then append div, create+append img, grab the image by iterating over amn array
+ // Double obLen to let all pictures have a match.
+ var obL = tDis.legnth;
+ var obL2 = (obL*2);
+ var mainDiv = document.createElement("DIV");
+ mainDiv.setAttribute("class", "grid");
+ mainDiv.setAttribute("id","main-div");
+ document.body.appendChild(mainDiv);
+ // LOOP-10A
+ for (var cnr = 0; cnr <= obL2; cnr ++){
+  var iDiv4 = document.createElement("DIV");
+  var iDiv2 = document.createElement("DIV");
+  var iCrd = document.createElement("IMG");
+  // ASSIGN NEXT tDis .aRef VAL TO IMG ELEM
+   iCrd.setAttribute("src", tDis[cnr].aRef);
+   iDiv4.setAttribute("class","item");
+   iDiv2.setAttribute("class","item-content");
+   iDiv4.appendChild(iDiv2);
+   iDiv2.appendChild(iCrd);
+   document.body.divOne.appendChild(iDiv4);
+ }
+
+ const artJson = 'https://860.media/portfolio/1/artists1.json';
+ var fid = [];
+ var newArr1 = [], newArr2 = [];
+ fetch(artJson).then(daBlob => daBlob.json()).then(jsonData => fid.push(...jsonData));
+ newArr1 = fid; newArr2 = fid;
+    for (var i = obL - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = newArr1[i];
+      newArr1[i] = newArr1[j];
+      newArr1[j] = temp;
+    }
+    for(var i2=obL-1;i2>0;i2--){ var j2=Math.floor(Math.random()*(i2+1));var temp2=newArr2[i2];newArr2[i2] = newArr2[j2]; newArr2[j2] = temp2; }
+ }
+
+
+ // use python to save the user's unique starting board - it would be nice to save it to the server
+ // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+ // var x = fruits.keys();
+ // Object.values()    .values() returns all enumerible key pair values
+ // Object.values(obj).forEach(value => {
+ // <h2> {value.name} </h2>
+ // });
+
+
+</script>
+</body>
+</html>
